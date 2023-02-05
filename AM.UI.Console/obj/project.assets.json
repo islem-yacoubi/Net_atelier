@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\4SE5\\.Net\\EmnaKhanfir-4SE5\\AM.UI.Console\\AM.UI.Console.csproj",
+      "projectUniqueName": "D:\\4SE5\\.Net\\IslemYacoubi-4SE5\\AM.UI.Console\\AM.UI.Console.csproj",
       "projectName": "AM.UI.Console",
-      "projectPath": "D:\\4SE5\\.Net\\EmnaKhanfir-4SE5\\AM.UI.Console\\AM.UI.Console.csproj",
+      "projectPath": "D:\\4SE5\\.Net\\IslemYacoubi-4SE5\\AM.UI.Console\\AM.UI.Console.csproj",
       "packagesPath": "C:\\Users\\Islem\\.nuget\\packages\\",
-      "outputPath": "D:\\4SE5\\.Net\\EmnaKhanfir-4SE5\\AM.UI.Console\\obj\\",
+      "outputPath": "D:\\4SE5\\.Net\\IslemYacoubi-4SE5\\AM.UI.Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Islem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\4SE5\\.Net\\EmnaKhanfir-4SE5\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {
-              "projectPath": "D:\\4SE5\\.Net\\EmnaKhanfir-4SE5\\AM.ApplicationCore\\AM.ApplicationCore.csproj"
+            "D:\\4SE5\\.Net\\IslemYacoubi-4SE5\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {
+              "projectPath": "D:\\4SE5\\.Net\\IslemYacoubi-4SE5\\AM.ApplicationCore\\AM.ApplicationCore.csproj"
             }
           }
         }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\4SE5\\.Net\\EmnaKhanfir-4SE5\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
+      "projectUniqueName": "D:\\4SE5\\.Net\\IslemYacoubi-4SE5\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
       "projectName": "AM.ApplicationCore",
-      "projectPath": "D:\\4SE5\\.Net\\EmnaKhanfir-4SE5\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
+      "projectPath": "D:\\4SE5\\.Net\\IslemYacoubi-4SE5\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
       "packagesPath": "C:\\Users\\Islem\\.nuget\\packages\\",
-      "outputPath": "D:\\4SE5\\.Net\\EmnaKhanfir-4SE5\\AM.ApplicationCore\\obj\\",
+      "outputPath": "D:\\4SE5\\.Net\\IslemYacoubi-4SE5\\AM.ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Islem\\AppData\\Roaming\\NuGet\\NuGet.Config",
