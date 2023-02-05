@@ -12,11 +12,15 @@ namespace AM.ApplicationCore.Domain
         public string Departure { get; set; }
         public DateTime FlightDate { get; set; }
         public int FlightId { get; set; }
-        public int EffectiveArrival { get; set; }
-        public int EstimatedDuration { get; set; } 
+        public DateTime EffectiveArrival { get; set; }
+        public DateTime EstimatedDuration { get; set; }
+        Plane p { get; set; }
 
-
-        public Plane plane { get; set; } 
-
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
+
+
 }
