@@ -1,58 +1,98 @@
-﻿//// See https://aka.ms/new-console-template for more information
-////declaration variable 
-//string ch;
-////type: string, int, char, double, float, bool,DateTime, long, ....
-
-//for (int i = 0; i < 2; i++)
-//{
-//    ch = Console.ReadLine();
-
-//    Console.WriteLine("Bonjour " + ch);
-
-
-
-//    int chiffreValue = 0;
-
-//   // do
-//    //
-//        try
-//        {
-//            string chiffre = Console.ReadLine();
-//            chiffreValue = int.Parse(chiffre);
-//        if (chiffreValue > 15 && chiffreValue <= 18)
-//        { Console.WriteLine("Ados"); }
-//        else if (chiffreValue > 18)
-//        { Console.WriteLine("Adulte"); }
-
-//    }
-//        catch
-//        {
-//            Console.WriteLine("Erreur au niveau de conversion du chiffre");
-//        }
-//    //} while (chiffreValue == 0);
-
-//    Console.WriteLine("Votre nombre est " + (chiffreValue + 1));
-
-//}
-
+﻿
 using AM.ApplicationCore.Domain;
-Personne p = new Personne();
-p.Id = 11;
-p.Nom = "yacoubi";
-p.Prenom = "Islem";
-p.Email = "islem.yacoubi@esprit.tn";
-p.DateNaissance = new DateTime(1999, 4, 2);
-p.Password= "password";
-Console.WriteLine(p);
-Personne p1 = new Personne("prenom",11, "nom",DateTime.Now,"email","password", "confirmPassword");
-Console.WriteLine(p1);
-Personne p2 = new Personne()
-{
-    Email = "email",
-    Nom = "islem"
 
-};
-Conducteur c = new Conducteur();
-p.GetMyType();
-c.GetMyType();
+
+
+
+Plane pl = new Plane();
+{
+    pl.Capacity = 123;
+    pl.ManualFactureDate = DateTime.Now;
+    pl.PlaneId = 3;
+    pl.PlaneType = PlaneType.Boing;
+
+    Console.WriteLine(pl);
+
+
+    Plane avion2 = new Plane()
+    {
+        Capacity = 350,
+        ManualFactureDate = DateTime.Now,
+        PlaneId = 4,
+        PlaneType = PlaneType.Airbus
+    };
+    Console.WriteLine(avion2);
+
+
+
+
+
+    Passenger pass = new Passenger()
+    {
+        BirthDate = DateTime.Now,
+        PasseportNumber = 95332,
+        EmailAddress = "test@esprit.tn",
+        FirstName = "Yacoubi",
+        LastName = "Islem",
+        TelNumber = 56761270
+    };
+
+
+    bool result = pass.CheckProfile("Yacoubi", "Islem");
+
+    if (result)
+    {
+        Console.WriteLine("Correct");
+    }
+    else
+    {
+        Console.WriteLine("Erreur");
+    }
+
+
+
+    Console.WriteLine(pass.CheckProfile("Islem", "Yacoubi", "Islem@Esprit.tn"));
+
+
+
+
+
+    bool result1 = pass.CheckProfile("Yacoubi", "Islem");
+
+    if (result1)
+    {
+        Console.WriteLine("Correct");
+    }
+    else
+    {
+        Console.WriteLine("Incorrect");
+    }
+
+    bool result2 = pass.CheckProfile("Yacoubi", "Islem", "test@esprit.tn");
+
+    if (result2)
+    {
+        Console.WriteLine("Correct");
+    }
+    else
+    {
+        Console.WriteLine("Incorrect");
+    }
+
+
+    Passenger psst = new Passenger();
+    psst.PassengerType();
+
+
+    Staff st = new Staff();
+    Traveller tr = new Traveller();
+    st.PassengerType();
+    tr.PassengerType();
+
+}
+
+
+
+
+
 
