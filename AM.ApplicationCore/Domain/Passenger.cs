@@ -16,50 +16,43 @@ namespace AM.ApplicationCore.Domain
         public string LastName { get; set; }
         public int TelNumber { get; set; }
 
-        List<Flight> Flights { get; set; }
+        public ICollection<Flight> Flights { get; set; }
 
         public override string ToString()
         {
-            return base.ToString();
+            return FirstName + " " + LastName + " " + BirthDate;
         }
 
         public Passenger()
         {
 
         }
-
-        public Passenger(DateTime birthDate, int passeportNumber, string emailAddress, string firstName, string lastName, int telNumber)
+        //a
+        //public bool checkProfile(string nom, string prenom)
+        //{
+        //    return FirstName==nom && LastName==prenom;
+        //}
+        ////b
+        //public bool checkProfile(string nom, string prenom,string email)
+        //{
+        //    return FirstName == nom && LastName == prenom&& EmailAddress==email;
+        //}
+        //c
+        public bool checkProfile(string nom, string prenom, string email = null)
         {
-            BirthDate = birthDate;
-            PasseportNumber = passeportNumber;
-            EmailAddress = emailAddress;
-            FirstName = firstName;
-            LastName = lastName;
-            TelNumber = telNumber;
+            if (email == null)
+            {
+                return FirstName == nom && LastName == prenom;
+            }
+            return FirstName == nom && LastName == prenom && EmailAddress == email;
         }
-
-        public bool CheckProfile(string nom, string prenom)
-        {
-            return FirstName == nom && LastName == prenom;
-        }
-
-
-
-        public bool CheckProfile(string nom, string prenom, string mail)
-        {
-            return FirstName == nom && LastName == prenom && EmailAddress == mail;
-        }
-
-       
-
-
-        /*11. Polymorphysme par héritage*/
-
-        public virtual void PassengerType()
+        //11
+        public virtual void passengerType()
         {
             Console.WriteLine("I am a passenger");
         }
 
-
     }
+
+
 }

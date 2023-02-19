@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -12,7 +13,7 @@ namespace AM.ApplicationCore.Domain
 
         public Personne()
         {
-
+            nb++;
         }
         public bool Login(string nom,string password,string email)
         {
@@ -40,6 +41,7 @@ namespace AM.ApplicationCore.Domain
         public string Email { get; set; }
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }
+        public static int nb { get; set; } 
         public override string ToString()
         {
             return "Id: "+Id+" " + "Nom: " + Nom +" "+ "Prenom: " + Prenom + " "+"Email: " + Email + " "+"DateNaissance: " +DateNaissance+ " ";

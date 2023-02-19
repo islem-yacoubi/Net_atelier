@@ -1,4 +1,5 @@
-﻿
+﻿using System.Collections;
+using System.Collections.Generic;
 using AM.ApplicationCore.Domain;
 
 
@@ -37,57 +38,52 @@ Plane pl = new Plane();
         TelNumber = 56761270
     };
 
+    //11
+    Traveller traveller = new Traveller();
+    Staff staff = new Staff();
+    Passenger passenger = new Passenger();
+    traveller.passengerType();
+    staff.passengerType();
+    passenger.passengerType();
+    //Collection des objets non génériques
 
-    bool result = pass.CheckProfile("Yacoubi", "Islem");
-
-    if (result)
+    ArrayList list = new ArrayList();
+    list.Add(pl);
+    list.Add(1);
+    list.Add("bonjour");
+    for (int i = 0; i < list.Count; i++)
     {
-        Console.WriteLine("Correct");
-    }
-    else
-    {
-        Console.WriteLine("Erreur");
-    }
-
-
-
-    Console.WriteLine(pass.CheckProfile("Islem", "Yacoubi", "Islem@Esprit.tn"));
-
-
-
-
-
-    bool result1 = pass.CheckProfile("Yacoubi", "Islem");
-
-    if (result1)
-    {
-        Console.WriteLine("Correct");
-    }
-    else
-    {
-        Console.WriteLine("Incorrect");
+        Console.WriteLine(list[i]);
     }
 
-    bool result2 = pass.CheckProfile("Yacoubi", "Islem", "test@esprit.tn");
-
-    if (result2)
+    foreach (var item in list)
     {
-        Console.WriteLine("Correct");
+        Console.WriteLine(item);
     }
-    else
+    //Collection des objets génériques
+    IList<Plane> planes = new List<Plane>();
+    //Ilist: IEnumerable, ICollection
+    //ICollection: IEnumerable
+    //IEnumerable: assure le parcours des listes uniquement 
+    //ICollection: les methode de parcours et insertion(add,remove,recherche..)
+    planes.Add(pl);
+    planes.Add(avion2);
+    IList<Plane> planes2 = new List<Plane>()
     {
-        Console.WriteLine("Incorrect");
-    }
+        pl,avion2,new Plane() {
+         Capacity = 400,
+        ManualFactureDate = DateTime.Now,
+        PlaneId = 6,
+        PlaneType = PlaneType.Airbus
+        }
+    };
+    Personne p1 = new Personne();
+    Console.WriteLine(Personne.nb);
+    Personne p2 = new Personne();
+    Console.WriteLine(Personne.nb);
+    Personne p3 = new Personne();
+    Console.WriteLine(Personne.nb);
 
-
-    Passenger psst = new Passenger();
-    psst.PassengerType();
-
-
-    Staff st = new Staff();
-    Traveller tr = new Traveller();
-    st.PassengerType();
-    tr.PassengerType();
 
 }
 
