@@ -11,10 +11,35 @@ namespace AM.ApplicationCore.Services
 {
     public class ServiceFlight:IServiceFlight
     {
-        public List<Flight> Flights { get; set; }   = new List<Flight>();
+        public ServiceFlight() {
+            FlightDetailsDel = (Plane plane)=>
+        {
+                var query = Flights
+                .Where(f => f.Plane.PlaneId == plane.PlaneId) // jamais trajaa true (si ki nzidhom .PlaneId)
+                    .Select(f => new { f.Destination, f.FlightDate });
+                foreach (var item in query)
+                {
+                    Console.WriteLine(item);
+                }
+            };
+            DurationAverageDel = (string destination)=>
+        {
+                var query = Flights
+                    .Where(f => f.Destination.Equals(destination))
+                    .Average(f => f.EstimatedDuration);
+                return query;
+            };
+                }  
 
+        public List<Flight> Flights { get; set; }   = new List<Flight>();
+        public Action <Plane> FlightDetailsDel { get; set; }
+        public Func<string ,double> DurationAverageDel { get; set; }
         public List<DateTime> GetFlightDates(string destination)
         {
+            var query = Flights
+            .Where(f => f.Destination == destination)
+            .Select(f => f.FlightDate).ToList();
+            return query;
             //List<DateTime> dates = new List<DateTime>();
             //for (int i=0;i<Flights.Count;i++) 
             //{
@@ -30,5 +55,23 @@ namespace AM.ApplicationCore.Services
             }
             return dates;
         }
+        public double DurationAverage(string destination)
+        {
+            var query = Flights
+                .Where(f => f.Destination.Equals(destination))
+                .Average(f => f.EstimatedDuration);
+            return query;
+        }
+        public void ShowFlightDetails(Plane plane)
+        {
+            var query = Flights
+                .Where(f => f.Plane.PlaneId == plane.PlaneId) // jamais trajaa true (si ki nzidhom .PlaneId)
+                .Select(f => new { f.Destination, f.FlightDate });
+            foreach (var item in query)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
     }
 }

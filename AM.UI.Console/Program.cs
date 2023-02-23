@@ -85,12 +85,15 @@ Plane pl = new Plane();
 
 
     //TP2 question 5 (ask about plane Flights)
-    IServiceFlight serviceFlight = new ServiceFlight();
+    ServiceFlight serviceFlight = new ServiceFlight();
     serviceFlight.Flights = TestData.Flights;
     //6
 
-
-
+    int a = 11;
+    a.add(20);
+    pass.UpperFullName();
+    Console.WriteLine(a);
+    Console.WriteLine(pass.FirstName);
 }
 
 
