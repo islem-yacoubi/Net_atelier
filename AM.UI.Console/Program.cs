@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using AM.ApplicationCore.Domain;
-
-
-
+using AM.ApplicationCore.Interfaces;
+using AM.ApplicationCore.Services;
 
 Plane pl = new Plane();
 {
@@ -83,6 +82,13 @@ Plane pl = new Plane();
     Console.WriteLine(Personne.nb);
     Personne p3 = new Personne();
     Console.WriteLine(Personne.nb);
+
+
+    //TP2 question 5 (ask about plane Flights)
+    IServiceFlight serviceFlight = new ServiceFlight();
+    serviceFlight.Flights = TestData.Flights;
+    //6
+
 
 
 }

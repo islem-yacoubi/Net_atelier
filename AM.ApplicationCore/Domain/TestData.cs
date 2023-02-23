@@ -56,8 +56,9 @@ namespace AM.ApplicationCore.Domain
             FlightDate=new DateTime(2022,01,01,15,10,10),
             Destination="Paris",
             EffectiveArrival=new DateTime(2022,01,01,17,10,10),
-            plane=Planes[2],
+            Plane = Planes[1],
             EstimatedDuration=110,
+            passengers=new List<Passenger>(Traveller)
 
 
 
