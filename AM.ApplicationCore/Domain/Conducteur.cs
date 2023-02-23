@@ -13,12 +13,12 @@ namespace AM.ApplicationCore.Domain
 
         public override string ToString()
         {
-            return base.ToString()+" "+DatePermis+" "+ TypePermis;
+            return base.ToString() + " " + DatePermis + " " + TypePermis;
         }
         public override void GetMyType()
         {
             Console.WriteLine("je suis un conducteur");
-          
+
         }
     }
 }
